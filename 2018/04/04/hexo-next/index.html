@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="饿，之前的旧版本博客不用了，这次是第三次换面板了（滑稽），可能以后不换了，最多改一下布局。看了一下Hexo的主题，觉得Next的蛮好看的，简洁，舒服。配置方面学习了一下，很简单，制作人蛮厉害的。">
+<meta name="keywords" content="next,hexo,教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo-next">
+<meta property="og:url" content="http://yoursite.com/2018/04/04/hexo-next/index.html">
+<meta property="og:site_name" content="Iaear&#39;s Space">
+<meta property="og:description" content="饿，之前的旧版本博客不用了，这次是第三次换面板了（滑稽），可能以后不换了，最多改一下布局。看了一下Hexo的主题，觉得Next的蛮好看的，简洁，舒服。配置方面学习了一下，很简单，制作人蛮厉害的。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/images/hexo-next.png">
+<meta property="og:image" content="http://yoursite.com/images/7iVVdep.png">
+<meta property="og:image" content="http://yoursite.com/images/RSCTurW.jpg">
+<meta property="og:image" content="http://yoursite.com/images/AqhPQst.png">
+<meta property="og:updated_time" content="2018-04-05T09:26:49.615Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo-next">
+<meta name="twitter:description" content="饿，之前的旧版本博客不用了，这次是第三次换面板了（滑稽），可能以后不换了，最多改一下布局。看了一下Hexo的主题，觉得Next的蛮好看的，简洁，舒服。配置方面学习了一下，很简单，制作人蛮厉害的。">
+<meta name="twitter:image" content="http://yoursite.com/images/hexo-next.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/04/hexo-next/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Hexo-next | Iaear's Space</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Iaear's Space</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Writing Life</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+</li>
+
+      
+
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/hexo-next/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Iaear">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Iaear's Space">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo-next</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-04T14:55:03+08:00">2018-04-04</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术类/" itemprop="url" rel="index"><span itemprop="name">技术类</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>饿，之前的旧版本博客不用了，这次是第三次换面板了（滑稽），可能以后不换了，最多改一下布局。<br>看了一下Hexo的主题，觉得Next的蛮好看的，简洁，舒服。配置方面学习了一下，很简单，制作人蛮厉害的。</p>
+<p><img src="/images/hexo-next.png" alt="hexo-next"><a id="more"></a><br>Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。</p>
+<p>全文分为三个部分：</p>
+<ol>
+<li>安装和配置Hexo及Github</li>
+<li>选择Hexo主题及发表文章</li>
+<li>注册及绑定自己的域名地址</li>
+</ol>
+<hr>
+<h2 id="安装和配置Hexo及Github"><a href="#安装和配置Hexo及Github" class="headerlink" title="安装和配置Hexo及Github"></a><strong>安装和配置Hexo及Github</strong></h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>安装Hexo前，需要安装以下：</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a></li>
+</ul>
+<p>如果已经安装完成以上程序，打开Git-bash或者cmd，输入</p>
+<pre><code>npm install -g hexo-cli
+</code></pre><p>即可完成Hexo的安装。</p>
+<h3 id="使用Hexo进行本地建站"><a href="#使用Hexo进行本地建站" class="headerlink" title="使用Hexo进行本地建站"></a>使用Hexo进行本地建站</h3><p>选择一个本地的文件夹，如<code>D:\hexo</code>。</p>
+<p>输入</p>
+<pre><code>hexo init D:\hexo
+cd D:\hexonpm install
+</code></pre><p>如果hexo安装成功，则在<code>D:\hexo</code>文件夹下的文件目录为</p>
+<pre><code>.
+├── _config.yml // 网站的配置信息，你可以在此配置大部分的参数。
+├── package.json 
+├── scaffolds // 模板文件夹。当你新建文章时，Hexo会根据scaffold来建立文件。
+├── source // 存放用户资源的地方
+|   ├── _drafts
+|   └── _posts
+└── themes // 存放网站的主题。Hexo会根据主题来生成静态页面。
+</code></pre><p>详细文件或文件夹的具体含义见 <a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="noopener">Hexo官方文档之建站</a></p>
+<p>为了测试本地建站是否成功，输入</p>
+<pre><code>hexo s
+</code></pre><p>如果显示如下</p>
+<p><img src="/images/7iVVdep.png" alt=""></p>
+<p>则说明本地建站成功，访问<a href="http://localhost:4000/" target="_blank" rel="noopener">本地地址</a>可以看到Hexo默认主题的效果。</p>
+<p>至此，Hexo的安装和本地建站完成，如需更加深入全面地了解Hexo，可访问<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a>。</p>
+<h3 id="创建Github账号"><a href="#创建Github账号" class="headerlink" title="创建Github账号"></a>创建Github账号</h3><p>如果已经注册Github，可跳过此步骤。否则，访问<a href="https://github.com/" target="_blank" rel="noopener">Github官网</a>进行注册，下面假设你注册Github账号名为MyGithub。</p>
+<h3 id="创建与账号同名的Repository"><a href="#创建与账号同名的Repository" class="headerlink" title="创建与账号同名的Repository"></a>创建与账号同名的Repository</h3><p>注册并登陆Github官网成功后，点击页面右上角的<code>+</code>，选择<code>New repository</code>。</p>
+<p>在<code>Repository name</code>中填写<code>你的Github账号名.github.io</code>，这里是<code>MyGithub.github.io</code>。<code>Description</code>中填写对此repository的描述信息(可选，但建议填写，如<code>Personal website</code>)。</p>
+<p>点击<code>Create repository</code>，完成创建。</p>
+<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p><strong>(1) 生成SSH</strong></p>
+<p>检查是否已经有SSH Key，打开Git Bash，输入</p>
+<pre><code>cd ~/.ssh
+</code></pre><p>如果没有这个目录，则生成一个新的SSH，输入</p>
+<pre><code>ssh-keygen -t rsa -C&quot;your e-mail&quot;
+</code></pre><p>其中，<code>your e-mail</code>是你注册Github时用到的邮箱。</p>
+<p>然后接下来几步都直接按回车键，最后生成如下</p>
+<p><img src="/images/RSCTurW.jpg" alt=""></p>
+<p><strong>(2) 复制公钥内容到Github账户信息中</strong></p>
+<p>打开<code>~/.ssh/id_rsa.pub</code>文件，复制里面的内容；</p>
+<p>打开Github官网，登陆后进入到个人设置(<code>点击头像-&gt;setting</code>)，点击右侧的<code>SSH Keys</code>，点击<code>Add SSH key</code>；填写title之后，将之前复制的内容粘贴到Key框中，最后点击<code>Add key</code>即可。</p>
+<p><strong>(3) 测试SSH是否配置成功</strong></p>
+<p>输入</p>
+<pre><code>ssh -T git@github.com
+</code></pre><p>如果显示以下，则说明ssh配置成功。</p>
+<pre><code>Hi username! You&apos;ve successfully authenticated, but GitHub does not
+provide shell access.
+</code></pre><h3 id="将网站发布到Github的同名repository中"><a href="#将网站发布到Github的同名repository中" class="headerlink" title="将网站发布到Github的同名repository中"></a>将网站发布到Github的同名repository中</h3><p>打开<code>D:\Hexo</code>文件夹中的<code>_config.yml</code>文件，找到如下位置，填写</p>
+<pre><code># Deployment## Docs: http://hexo.io/docs/deployment.htmldeploy: 
+  type: git
+  repo: git@github.com:MyGithub/MyGithub.github.io
+</code></pre><p><strong>注</strong>： (1) 其中<code>MyGithub</code>替换成你的Github账户; (2) 注意在yml文件中，<code>:</code>后面都是要带空格的。</p>
+<p>此时，通过访问<code>http://MyGithub.github.io</code>可以看到默认的Hexo首页面（与之前本地测试时一样）。</p>
+<h2 id="选择Hexo主题及发表文章"><a href="#选择Hexo主题及发表文章" class="headerlink" title="选择Hexo主题及发表文章"></a><strong>选择Hexo主题及发表文章</strong></h2><h3 id="简洁的Next主题"><a href="#简洁的Next主题" class="headerlink" title="简洁的Next主题"></a>简洁的Next主题</h3><p>本网站使用的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">Next主题</a>。该主题简洁易用，在移动端也表现不错。</p>
+<p><strong>(1) 下载Next主题</strong></p>
+<pre><code>cd D:\Hexo
+git clonehttps://github.com/iissnan/hexo-theme-next themes/next
+</code></pre><p><strong>(2) 修改网站的主题为Next</strong></p>
+<p>打开<code>D:\Hexo</code>下的<code>_config.yml</code>文件，找到<code>theme</code>字段，将其修改为<code>next</code></p>
+<pre><code># Extensions## Plugins: http://hexo.io/plugins/## Themes: http://hexo.io/themes/
+theme: next
+</code></pre><p><strong>(3) 本地验证是否可用</strong></p>
+<p>输入</p>
+<pre><code>hexo s --debug
+</code></pre><p>访问<a href="http://localhost:4000" target="_blank" rel="noopener">本地网站</a>，确认网站主题是否切换为Next.</p>
+<p><strong>(4) 更新Github</strong></p>
+<p>输入</p>
+<pre><code>hexo g -d
+</code></pre><p>完成Github上网页文件的更新。</p>
+<h3 id="发表新文章"><a href="#发表新文章" class="headerlink" title="发表新文章"></a>发表新文章</h3><p>发表文章操作非常简单，在网站存放的根目录打开<code>git bash</code>，输入</p>
+<pre><code>hexo n &quot;name of the new post&quot;
+</code></pre><p>回车后，在source文件夹下的_post文件夹下，可以看到新建了一个<code>name of the new post.md</code>的文件，打开</p>
+<pre><code>title: name of the new post
+date: 2015-12-09 22:55:25
+tags:
+---
+</code></pre><p>可以给文章贴上相应的tags，如有多个则按照如下格式</p>
+<pre><code>[tag1, tag2, tag3, ...]
+</code></pre><p>在<code>- - -</code>下方添加正文内容即可，注意需要使用markdown语法进行书写。</p>
+<p><a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">在这里</a>有关于Markdown语法的简单说明。推荐使用<a href="http://markdownpad.com/" target="_blank" rel="noopener">MarkdownPad2</a>进行md文件的编辑工作。</p>
+<p>文章撰写完成后保存，输入</p>
+<pre><code>hexo g -d
+</code></pre><p>即可生成新网站，并且同步Github上的网站内容。</p>
+<h2 id="注册及绑定自己的域名地址"><a href="#注册及绑定自己的域名地址" class="headerlink" title="注册及绑定自己的域名地址"></a><strong>注册及绑定自己的域名地址</strong></h2><p>截止到目前为止，你应该可以通过访问<code>http://MyGithub.github.io</code>来看到以上创建的网站了。</p>
+<p>但是，如何拥有一个属于自己的域名地址，并将其指向在Github上所创建的网站呢？</p>
+<h3 id="注册域名"><a href="#注册域名" class="headerlink" title="注册域名"></a>注册域名</h3><p>推荐选择国内的<a href="http://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a>或者国外的<a href="https://www.godaddy.com/" target="_blank" rel="noopener">Goddady</a>进行域名的注册。(我的就是在万网注册的)</p>
+<h3 id="DNS域名解析设置"><a href="#DNS域名解析设置" class="headerlink" title="DNS域名解析设置"></a>DNS域名解析设置</h3><p>如果你选择的是万网注册的域名，可以使用其自带的域名解析服务。</p>
+<p>进入<a href="http://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a>，登陆后进入到个人中心(点击用户名即可)，点击左侧的”云解析”，点击之前所购买的域名，在”解析设置”中，添加如下解析规则:</p>
+<p><img src="/images/AqhPQst.png" alt="域名解析"></p>
+<p>其中，当记录类型为A时，记录值为服务器的ip地址，这里的服务器地址为存放<code>Github page</code>的地址，你可以通过命令行输入</p>
+<pre><code>ping github.io
+</code></pre><p>得到。</p>
+<p>DNS域名解析设置需要一定时间，之后你可以通过ping自己的域名地址来查看是否解析成功。</p>
+<h3 id="在Github对应的repository中添加CNAME文件"><a href="#在Github对应的repository中添加CNAME文件" class="headerlink" title="在Github对应的repository中添加CNAME文件"></a>在Github对应的repository中添加CNAME文件</h3><p>即在 MyGithub/MyGithub.github.io 中加入名为”CNAME”的文件，文件内容为你的域名地址，如</p>
+<pre><code>www.××××××.com
+</code></pre><p>保存即可。</p>
+<p>CNAME文件设置的目的是，通过访问 MyGithub.github.io 可以跳转到你所注册的域名上。</p>
+<p>为了方便本地文件deploy的时候，CNAME文件不发生丢失，可以在本地网站根目录下的source文件夹下，添加以上的CNAME文件。以后每次deploy的时候，CNAME文件不会发生丢失。</p>
+<hr>
+<p>通过以上的设置，相信你已经可以通过注册域名来访问一个默认的hexo主题页面了。之后的工作就在于，(1)如何对主题进行个性化设置及；(2)发表博文以充实网站内容。<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">这里</a>有关于next主题的个性化设置说明。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/next/" rel="tag"><i class="fa fa-tag"></i> next</a>
+          
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+          
+            <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/me.jpg"
+                alt="Iaear" />
+            
+              <p class="site-author-name" itemprop="name">Iaear</p>
+              <p class="site-description motion-element" itemprop="description">水能载舟，亦能煮粥</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装和配置Hexo及Github"><span class="nav-number">1.</span> <span class="nav-text">安装和配置Hexo及Github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Hexo进行本地建站"><span class="nav-number">1.2.</span> <span class="nav-text">使用Hexo进行本地建站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建Github账号"><span class="nav-number">1.3.</span> <span class="nav-text">创建Github账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建与账号同名的Repository"><span class="nav-number">1.4.</span> <span class="nav-text">创建与账号同名的Repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置SSH"><span class="nav-number">1.5.</span> <span class="nav-text">配置SSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将网站发布到Github的同名repository中"><span class="nav-number">1.6.</span> <span class="nav-text">将网站发布到Github的同名repository中</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择Hexo主题及发表文章"><span class="nav-number">2.</span> <span class="nav-text">选择Hexo主题及发表文章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简洁的Next主题"><span class="nav-number">2.1.</span> <span class="nav-text">简洁的Next主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发表新文章"><span class="nav-number">2.2.</span> <span class="nav-text">发表新文章</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册及绑定自己的域名地址"><span class="nav-number">3.</span> <span class="nav-text">注册及绑定自己的域名地址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册域名"><span class="nav-number">3.1.</span> <span class="nav-text">注册域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS域名解析设置"><span class="nav-number">3.2.</span> <span class="nav-text">DNS域名解析设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在Github对应的repository中添加CNAME文件"><span class="nav-number">3.3.</span> <span class="nav-text">在Github对应的repository中添加CNAME文件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 - 2020
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Iaear</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+  <span class="post-meta-divider">用一个域名和一个空间 - 搭建乐趣</span>
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.6"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
